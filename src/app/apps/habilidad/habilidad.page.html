@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>habilidad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>Habilidad</div>
+      </ion-col>
+      <ion-col>
+        <div>Recurso</div>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="habi.length > 0;else third">
+      <ion-row *ngFor="let j of habi;let indice=index">
+        <ion-col>
+          <div>{{j.Habilidad}}</div>
+        </ion-col>
+        <ion-col>
+          <div><a [routerLink]="['/recursos', j._id]">Ver Recurso</a></div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ng-template #third>
+      <ion-col col-3>
+        <div><h1>CARGANDO.......</h1></div>
+      </ion-col>
+    </ng-template>
+  </ion-grid>
+</ion-content>

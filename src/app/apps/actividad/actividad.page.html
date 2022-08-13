@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>actividad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>Actividad</div>
+      </ion-col>
+      <ion-col>
+        <div>N Pagina</div>
+      </ion-col>
+      <ion-col>
+        <div>Recurso</div>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="resu.length > 0;else second">
+      <ion-row *ngFor="let i of resu;let indice=index">
+        <ion-col>
+          <div>{{i.actividades}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{i.pagina}}</div>
+        </ion-col>
+        <ion-col>
+          <div> <a [routerLink]="['/recursos', i._id]"> Ver Recurso</a> </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ng-template #second>
+      <ion-col col-3>
+        <div><h1>CARGANDO.......</h1></div>
+      </ion-col>
+    </ng-template>
+  </ion-grid>
+</ion-content>

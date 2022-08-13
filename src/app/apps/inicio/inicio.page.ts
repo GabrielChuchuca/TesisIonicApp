@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
 })
 export class InicioPage implements OnInit {
   sToken: string = "";
+  sUsua: string;
 
   constructor(pRuta: Router) { 
-    this.sToken = sessionStorage.getItem('token') || "";
-    if (this.sToken.length === 0) { pRuta.navigateByUrl('/login'); }
+    this.sToken = sessionStorage.getItem('tokenI') || "";
+    this.sUsua = sessionStorage.getItem('username') || '';
+    if (this.sToken.length === 0) { pRuta.navigateByUrl('/home'); }
   }
 
   ngOnInit() {

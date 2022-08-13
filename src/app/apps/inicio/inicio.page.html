@@ -2,8 +2,24 @@
   <ion-toolbar>
     <ion-title>inicio</ion-title>
   </ion-toolbar>
+  <ion-label>Usuario: {{sUsua}}</ion-label>
+  <button onclick="sessionStorage.clear(); window.location.reload();">SALIR CUENTA</button>
 </ion-header>
 
 <ion-content>
-
 </ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="actividad">
+      <ion-label>
+        ACTIVIDAD
+      </ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="habilidad">
+      <ion-label>
+        HABILIDAD
+      </ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

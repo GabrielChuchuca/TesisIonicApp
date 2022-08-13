@@ -19,6 +19,22 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./apps/inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'recursos',
+    loadChildren: () => import('./apps/recursos/recursos.module').then( m => m.RecursosPageModule)
+  },
+  {
+    path: 'recurso-app',
+    loadChildren: () => import('./apps/recurso-app/recurso-app.module').then( m => m.RecursoAppPageModule)
+  },
+  {
+    path: 'recurso-cuento',
+    loadChildren: () => import('./apps/recurso-cuento/recurso-cuento.module').then( m => m.RecursoCuentoPageModule)
+  },
+  {
+    path: 'recurso-juego',
+    loadChildren: () => import('./apps/recurso-juego/recurso-juego.module').then( m => m.RecursoJuegoPageModule)
+  },
 ];
 
 @NgModule({
